@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="Unsplash" lang="">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mystyles.css"/>
+    <title>Unsplash-angular</title>
+</head>
+<body>
+<div ng-app="app" ng-controller="imageController">
+    <form class="header">
+        <input ng-model="searchTag" type="text">
+        <input type="submit" ng-click="images()">
+    </form>
+    <div class="wrap">
+        <img ng-repeat="photo in photos" ng-src="{{photo.thumb}}" alt="image"/>
+    </div>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/PhotoController.js"></script>
+</body>
+</html>
